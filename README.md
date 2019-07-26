@@ -1,2 +1,2 @@
 # demo
-TouchGFX
+TouchGFX-stm32f429demo
