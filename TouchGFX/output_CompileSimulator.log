@@ -1,0 +1,27 @@
+Converting images
+Compiling gui/src/screen1_screen/Screen1Presenter.cpp
+Compiling gui/src/screen1_screen/Screen1View.cpp
+Compiling gui/src/model/Model.cpp
+gui/src/model/Model.cpp:3:22: fatal error: cmsis_os.h: No such file or directory
+ #include "cmsis_os.h"
+                      ^
+compilation terminated.
+simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/model/Model.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/model/Model.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+gui/src/screen1_screen/Screen1Presenter.cpp:3:18: fatal error: main.h: No such file or directory
+ #include "main.h"
+                  ^
+compilation terminated.
+gui/src/screen1_screen/Screen1View.cpp:2:18: fatal error: main.h: No such file or directory
+ #include "main.h"
+                  ^
+compilation terminated.
+simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/screen1_screen/Screen1View.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/screen1_screen/Screen1View.o] Error 1
+simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/screen1_screen/Screen1Presenter.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/screen1_screen/Screen1Presenter.o] Error 1
+simulator/gcc/Makefile:182: recipe for target 'generate_assets' failed
+make[1]: *** [generate_assets] Error 2
+simulator/gcc/Makefile:40: recipe for target 'all' failed
+make: *** [all] Error 2
