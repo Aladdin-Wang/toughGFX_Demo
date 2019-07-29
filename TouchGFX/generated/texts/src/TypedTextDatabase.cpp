@@ -23,12 +23,18 @@ const touchgfx::Font* const _fonts[] =
 TEXT_LOCATION_FLASH_PRAGMA
 const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[] TEXT_LOCATION_FLASH_ATTRIBUTE =
 {
-    { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 0, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
     { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
     { 2, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 2, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 2, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR }
+    { 2, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 0, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 0, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 0, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 0, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 0, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR }
 };
 
 

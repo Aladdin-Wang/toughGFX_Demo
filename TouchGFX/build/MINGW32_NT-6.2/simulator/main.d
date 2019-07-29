@@ -63,10 +63,9 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Utils.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/JSMOCHelper.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/mvp/Presenter.hpp \
- gui/include/gui/model/Model.hpp \
- gui/include/gui/screen1_screen/Screen1View.hpp \
- generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp \
- gui/include/gui/screen1_screen/Screen1Presenter.hpp \
+ gui/include/gui/model/Model.hpp gui/include/gui/home_screen/HOMEView.hpp \
+ generated/gui_generated/include/gui_generated/home_screen/HOMEViewBase.hpp \
+ gui/include/gui/home_screen/HOMEPresenter.hpp \
  gui/include/gui/model/ModelListener.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Box.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp \
@@ -74,11 +73,19 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp \
- gui/include/gui/screen2_screen/Screen2View.hpp \
- generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp \
- gui/include/gui/screen2_screen/Screen2Presenter.hpp \
+ gui/include/gui/did_screen/DIDView.hpp \
+ generated/gui_generated/include/gui_generated/did_screen/DIDViewBase.hpp \
+ gui/include/gui/did_screen/DIDPresenter.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp \
+ gui/include/gui/dtc_screen/DTCView.hpp \
+ generated/gui_generated/include/gui_generated/dtc_screen/DTCViewBase.hpp \
+ gui/include/gui/dtc_screen/DTCPresenter.hpp \
+ gui/include/gui/updata_screen/UPDATAView.hpp \
+ generated/gui_generated/include/gui_generated/updata_screen/UPDATAViewBase.hpp \
+ gui/include/gui/updata_screen/UPDATAPresenter.hpp \
+ gui/include/gui/key_screen/KEYView.hpp \
+ generated/gui_generated/include/gui_generated/key_screen/KEYViewBase.hpp \
+ gui/include/gui/key_screen/KEYPresenter.hpp \
  generated/images/include/BitmapDatabase.hpp \
  generated/gui_generated/include/gui_generated/common/SimConstants.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/platform/driver/touch/SDL2TouchController.hpp \
@@ -215,11 +222,11 @@ generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
 
 gui/include/gui/model/Model.hpp:
 
-gui/include/gui/screen1_screen/Screen1View.hpp:
+gui/include/gui/home_screen/HOMEView.hpp:
 
-generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:
+generated/gui_generated/include/gui_generated/home_screen/HOMEViewBase.hpp:
 
-gui/include/gui/screen1_screen/Screen1Presenter.hpp:
+gui/include/gui/home_screen/HOMEPresenter.hpp:
 
 gui/include/gui/model/ModelListener.hpp:
 
@@ -235,15 +242,31 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp:
 
-gui/include/gui/screen2_screen/Screen2View.hpp:
+gui/include/gui/did_screen/DIDView.hpp:
 
-generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:
+generated/gui_generated/include/gui_generated/did_screen/DIDViewBase.hpp:
 
-gui/include/gui/screen2_screen/Screen2Presenter.hpp:
+gui/include/gui/did_screen/DIDPresenter.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
 
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp:
+gui/include/gui/dtc_screen/DTCView.hpp:
+
+generated/gui_generated/include/gui_generated/dtc_screen/DTCViewBase.hpp:
+
+gui/include/gui/dtc_screen/DTCPresenter.hpp:
+
+gui/include/gui/updata_screen/UPDATAView.hpp:
+
+generated/gui_generated/include/gui_generated/updata_screen/UPDATAViewBase.hpp:
+
+gui/include/gui/updata_screen/UPDATAPresenter.hpp:
+
+gui/include/gui/key_screen/KEYView.hpp:
+
+generated/gui_generated/include/gui_generated/key_screen/KEYViewBase.hpp:
+
+gui/include/gui/key_screen/KEYPresenter.hpp:
 
 generated/images/include/BitmapDatabase.hpp:
 

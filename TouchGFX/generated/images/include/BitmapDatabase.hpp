@@ -10,12 +10,14 @@ const uint16_t BITMAP_B10_ID = 0; // Size: 64x64 pixels
 const uint16_t BITMAP_B4_ID = 1; // Size: 64x64 pixels
 const uint16_t BITMAP_B5_ID = 2; // Size: 64x64 pixels
 const uint16_t BITMAP_B7_ID = 3; // Size: 64x64 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_ROUND_SMALL_ID = 4; // Size: 170x60 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_ROUND_SMALL_PRESSED_ID = 5; // Size: 170x60 pixels
-const uint16_t BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID = 6; // Size: 128x38 pixels
-const uint16_t BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID = 7; // Size: 128x38 pixels
-const uint16_t BITMAP_BTN_ID = 8; // Size: 130x56 pixels
-const uint16_t BITMAP_BTN_PRESSED_ID = 9; // Size: 130x56 pixels
+const uint16_t BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID = 4; // Size: 170x60 pixels
+const uint16_t BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID = 5; // Size: 170x60 pixels
+const uint16_t BITMAP_BLUE_BUTTONS_ROUND_SMALL_ID = 6; // Size: 170x60 pixels
+const uint16_t BITMAP_BLUE_BUTTONS_ROUND_SMALL_PRESSED_ID = 7; // Size: 170x60 pixels
+const uint16_t BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID = 8; // Size: 128x38 pixels
+const uint16_t BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID = 9; // Size: 128x38 pixels
+const uint16_t BITMAP_BTN_ID = 10; // Size: 130x56 pixels
+const uint16_t BITMAP_BTN_PRESSED_ID = 11; // Size: 130x56 pixels
 
 namespace BitmapDatabase
 {

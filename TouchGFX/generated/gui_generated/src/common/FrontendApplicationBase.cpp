@@ -7,10 +7,16 @@
 #include <touchgfx/transitions/NoTransition.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 #include <touchgfx/Texts.hpp>
-#include <gui/screen1_screen/Screen1View.hpp>
-#include <gui/screen1_screen/Screen1Presenter.hpp>
-#include <gui/screen2_screen/Screen2View.hpp>
-#include <gui/screen2_screen/Screen2Presenter.hpp>
+#include <gui/home_screen/HOMEView.hpp>
+#include <gui/home_screen/HOMEPresenter.hpp>
+#include <gui/did_screen/DIDView.hpp>
+#include <gui/did_screen/DIDPresenter.hpp>
+#include <gui/dtc_screen/DTCView.hpp>
+#include <gui/dtc_screen/DTCPresenter.hpp>
+#include <gui/updata_screen/UPDATAView.hpp>
+#include <gui/updata_screen/UPDATAPresenter.hpp>
+#include <gui/key_screen/KEYView.hpp>
+#include <gui/key_screen/KEYPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -27,29 +33,55 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
 /*
  * Screen Transition Declarations
  */
-// Screen1
+// HOME
 
-void FrontendApplicationBase::gotoScreen1ScreenNoTransition()
+void FrontendApplicationBase::gotoHOMEScreenNoTransition()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoScreen1ScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoHOMEScreenNoTransitionImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoScreen1ScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoHOMEScreenNoTransitionImpl()
 {
-    makeTransition<Screen1View, Screen1Presenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    makeTransition<HOMEView, HOMEPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
-// Screen2
+// DID
 
-void FrontendApplicationBase::gotoScreen2ScreenNoTransition()
+void FrontendApplicationBase::gotoDIDScreenNoTransition()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoScreen2ScreenNoTransitionImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoDIDScreenNoTransitionImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoScreen2ScreenNoTransitionImpl()
+void FrontendApplicationBase::gotoDIDScreenNoTransitionImpl()
 {
-    makeTransition<Screen2View, Screen2Presenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    makeTransition<DIDView, DIDPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// DTC
+
+void FrontendApplicationBase::gotoDTCScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoDTCScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoDTCScreenNoTransitionImpl()
+{
+    makeTransition<DTCView, DTCPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// UPDATA
+
+void FrontendApplicationBase::gotoUPDATAScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoUPDATAScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoUPDATAScreenNoTransitionImpl()
+{
+    makeTransition<UPDATAView, UPDATAPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 

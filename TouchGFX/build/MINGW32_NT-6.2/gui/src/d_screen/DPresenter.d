@@ -40,17 +40,7 @@ build/MINGW32_NT-6.2/gui/src/d_screen/DPresenter.o: \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/mvp/Presenter.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/mvp/MVPHeap.hpp \
  gui/include/gui/model/Model.hpp gui/include/gui/d_screen/DPresenter.hpp \
- gui/include/gui/model/ModelListener.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Box.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/FontManager.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ToggleButton.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ButtonWithLabel.hpp
+ gui/include/gui/model/ModelListener.hpp
 
 gui/include/gui/d_screen/DView.hpp:
 
@@ -137,23 +127,3 @@ gui/include/gui/model/Model.hpp:
 gui/include/gui/d_screen/DPresenter.hpp:
 
 gui/include/gui/model/ModelListener.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Box.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/FontManager.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ToggleButton.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ButtonWithLabel.hpp:

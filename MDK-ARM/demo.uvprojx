@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F429xx,USE_HAL_DRIVER,STM32F429xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;             ../Drivers/STM32F4xx_HAL_Driver/Inc;             ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;             ../Middlewares/Third_Party/FatFs/src;             ../Middlewares/Third_Party/FreeRTOS/Source/include;             ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;             ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;             ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;             ../Drivers/CMSIS/Include;             ..\BSP;        ../Src;        ../TouchGFX/generated/fonts/include;        ../TouchGFX/generated/texts/include;        ../TouchGFX/generated/images/include;        ../TouchGFX/generated/gui_generated/include;        ../TouchGFX/gui/include;../middlewares/st/touchgfx/touchgfx/framework/include;        ../Drivers/BSP/Components/exc7200;        ../Drivers/BSP/Components/stmpe811;        ../Drivers/BSP/Components/ts3510;        ../Drivers/BSP/Components/ampire480272;        ../Drivers/BSP/Components/Common;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include</IncludePath>
+              <IncludePath>../Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FatFs/src;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;..\BSP;../Src;../TouchGFX/generated/fonts/include;../TouchGFX/generated/texts/include;../TouchGFX/generated/images/include;../TouchGFX/generated/gui_generated/include;../TouchGFX/gui/include;../middlewares/st/touchgfx/touchgfx/framework/include;../Drivers/BSP/Components/exc7200;../Drivers/BSP/Components/stmpe811;../Drivers/BSP/Components/ts3510;../Drivers/BSP/Components/ampire480272;../Drivers/BSP/Components/Common;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;..\Diag</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -730,9 +730,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Drivers/BSP/Components</GroupName>
-        </Group>
-        <Group>
           <GroupName>Middlewares/TouchGFX</GroupName>
           <Files>
             <File>
@@ -751,9 +748,49 @@
           <GroupName>Application/User/TouchGFX/gui</GroupName>
           <Files>
             <File>
+              <FileName>DIDPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/did_screen/didpresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>DIDView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/did_screen/didview.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>DTCPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/dtc_screen/dtcpresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>DTCView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/dtc_screen/dtcview.cpp</FilePath>
+            </File>
+            <File>
               <FileName>FrontendApplication.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/gui/src/common/frontendapplication.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>HOMEPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/home_screen/homepresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>HOMEView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/home_screen/homeview.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>KEYPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/key_screen/keypresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>KEYView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/key_screen/keyview.cpp</FilePath>
             </File>
             <File>
               <FileName>Model.cpp</FileName>
@@ -761,24 +798,14 @@
               <FilePath>../touchgfx/gui/src/model/model.cpp</FilePath>
             </File>
             <File>
-              <FileName>Screen1Presenter.cpp</FileName>
+              <FileName>UPDATAPresenter.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/screen1_screen/screen1presenter.cpp</FilePath>
+              <FilePath>../touchgfx/gui/src/updata_screen/updatapresenter.cpp</FilePath>
             </File>
             <File>
-              <FileName>Screen1View.cpp</FileName>
+              <FileName>UPDATAView.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/screen1_screen/screen1view.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Screen2Presenter.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/screen2_screen/screen2presenter.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Screen2View.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/screen2_screen/screen2view.cpp</FilePath>
+              <FilePath>../touchgfx/gui/src/updata_screen/updataview.cpp</FilePath>
             </File>
           </Files>
         </Group>
@@ -816,6 +843,16 @@
               <FilePath>../touchgfx/generated/images/src/bitmapdatabase.cpp</FilePath>
             </File>
             <File>
+              <FileName>blue_buttons_round_edge_small.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/__designer/blue_buttons_round_edge_small.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>blue_buttons_round_edge_small_pressed.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/__designer/blue_buttons_round_edge_small_pressed.cpp</FilePath>
+            </File>
+            <File>
               <FileName>blue_buttons_round_small.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/images/src/__designer/blue_buttons_round_small.cpp</FilePath>
@@ -846,6 +883,16 @@
               <FilePath>../touchgfx/generated/images/src/btn_pressed.cpp</FilePath>
             </File>
             <File>
+              <FileName>DIDViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/did_screen/didviewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>DTCViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/dtc_screen/dtcviewbase.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Font_verdana_10_4bpp.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/font_verdana_10_4bpp.cpp</FilePath>
@@ -871,6 +918,11 @@
               <FilePath>../touchgfx/generated/gui_generated/src/common/frontendapplicationbase.cpp</FilePath>
             </File>
             <File>
+              <FileName>HOMEViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/home_screen/homeviewbase.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Kerning_verdana_10_4bpp.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/kerning_verdana_10_4bpp.cpp</FilePath>
@@ -886,19 +938,14 @@
               <FilePath>../touchgfx/generated/fonts/src/kerning_verdana_40_4bpp.cpp</FilePath>
             </File>
             <File>
+              <FileName>KEYViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/key_screen/keyviewbase.cpp</FilePath>
+            </File>
+            <File>
               <FileName>LanguageGb.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/texts/src/languagegb.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Screen1ViewBase.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/gui_generated/src/screen1_screen/screen1viewbase.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Screen2ViewBase.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/gui_generated/src/screen2_screen/screen2viewbase.cpp</FilePath>
             </File>
             <File>
               <FileName>Table_verdana_10_4bpp.cpp</FileName>
@@ -924,6 +971,31 @@
               <FileName>TypedTextDatabase.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/texts/src/typedtextdatabase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>UPDATAViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/updata_screen/updataviewbase.cpp</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Diag</GroupName>
+          <Files>
+            <File>
+              <FileName>ReadFileDate.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\Diag\ReadFileDate.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>tp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\Diag\tp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>UDS.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\Diag\UDS.cpp</FilePath>
             </File>
           </Files>
         </Group>
