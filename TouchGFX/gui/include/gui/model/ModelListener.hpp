@@ -27,7 +27,7 @@ public:
     {
         model = m;
     }
-		 virtual void key_event()
+	virtual void key_event()
     {
         // Override and implement this function in Screen1Presenter
     }

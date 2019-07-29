@@ -53,10 +53,9 @@ demo\didviewbase.o: ../TouchGFX/gui/include/gui/model/ModelListener.hpp
 demo\didviewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Box.hpp
 demo\didviewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Widget.hpp
 demo\didviewbase.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
-demo\didviewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp
+demo\didviewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp
 demo\didviewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Button.hpp
 demo\didviewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp
-demo\didviewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp
 demo\didviewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/TypedText.hpp
 demo\didviewbase.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\cassert
 demo\didviewbase.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h

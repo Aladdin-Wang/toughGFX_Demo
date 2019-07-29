@@ -11,13 +11,25 @@
 
 
 
+
+
+
+
+
+
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
-#include <gui/screen1_screen/Screen1View.hpp>
-#include <gui/screen1_screen/Screen1Presenter.hpp>
-#include <gui/screen2_screen/Screen2View.hpp>
-#include <gui/screen2_screen/Screen2Presenter.hpp>
+#include <gui/home_screen/HOMEView.hpp>
+#include <gui/home_screen/HOMEPresenter.hpp>
+#include <gui/did_screen/DIDView.hpp>
+#include <gui/did_screen/DIDPresenter.hpp>
+#include <gui/dtc_screen/DTCView.hpp>
+#include <gui/dtc_screen/DTCPresenter.hpp>
+#include <gui/updata_screen/UPDATAView.hpp>
+#include <gui/updata_screen/UPDATAPresenter.hpp>
+#include <gui/key_screen/KEYView.hpp>
+#include <gui/key_screen/KEYPresenter.hpp>
 
 
 /**
@@ -40,9 +52,12 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef meta::TypeList< Screen1View,
-            meta::TypeList< Screen2View,
-            meta::Nil >
+    typedef meta::TypeList< HOMEView,
+            meta::TypeList< DIDView,
+            meta::TypeList< DTCView,
+            meta::TypeList< UPDATAView,
+            meta::TypeList< KEYView,
+            meta::Nil > > > >
             > GeneratedViewTypes;
 
     /**
@@ -54,9 +69,12 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef meta::TypeList< Screen1Presenter,
-            meta::TypeList< Screen2Presenter,
-            meta::Nil >
+    typedef meta::TypeList< HOMEPresenter,
+            meta::TypeList< DIDPresenter,
+            meta::TypeList< DTCPresenter,
+            meta::TypeList< UPDATAPresenter,
+            meta::TypeList< KEYPresenter,
+            meta::Nil > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -79,7 +97,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoScreen1ScreenNoTransition();
+        app.gotoHOMEScreenNoTransition();
     }
 protected:
     FrontendHeapBase(AbstractPartition& presenters, AbstractPartition& views, AbstractPartition& transitions, FrontendApplication& app)
