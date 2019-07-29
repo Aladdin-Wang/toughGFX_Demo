@@ -29,7 +29,7 @@ public:
     }
 		 virtual void key_event()
     {
-        // Override and implement this function in Screen1View
+        // Override and implement this function in Screen1Presenter
     }
 protected:
     Model* model;
