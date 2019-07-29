@@ -64,3 +64,4 @@ demo\screen2presenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/t
 demo\screen2presenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Button.hpp
 demo\screen2presenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp
 demo\screen2presenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp
+demo\screen2presenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Image.hpp

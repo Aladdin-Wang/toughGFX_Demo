@@ -73,6 +73,7 @@ demo\boardconfiguration.o: ../TouchGFX/gui/include/gui/screen2_screen/Screen2Vie
 demo\boardconfiguration.o: ../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp
 demo\boardconfiguration.o: ../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp
 demo\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp
+demo\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Image.hpp
 demo\boardconfiguration.o: ../TouchGFX/generated/images/include/BitmapDatabase.hpp
 demo\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/hal/BoardConfiguration.hpp
 demo\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/hal/GPIO.hpp

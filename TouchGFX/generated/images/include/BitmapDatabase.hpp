@@ -14,6 +14,8 @@ const uint16_t BITMAP_BLUE_BUTTONS_ROUND_SMALL_ID = 4; // Size: 170x60 pixels
 const uint16_t BITMAP_BLUE_BUTTONS_ROUND_SMALL_PRESSED_ID = 5; // Size: 170x60 pixels
 const uint16_t BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID = 6; // Size: 128x38 pixels
 const uint16_t BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID = 7; // Size: 128x38 pixels
+const uint16_t BITMAP_BTN_ID = 8; // Size: 130x56 pixels
+const uint16_t BITMAP_BTN_PRESSED_ID = 9; // Size: 130x56 pixels
 
 namespace BitmapDatabase
 {

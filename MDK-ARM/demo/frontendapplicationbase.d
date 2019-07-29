@@ -70,4 +70,5 @@ demo\frontendapplicationbase.o: ../TouchGFX/gui/include/gui/screen2_screen/Scree
 demo\frontendapplicationbase.o: ../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp
 demo\frontendapplicationbase.o: ../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp
 demo\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp
+demo\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Image.hpp
 demo\frontendapplicationbase.o: ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp

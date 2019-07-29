@@ -79,6 +79,16 @@
   <FilePath>../touchgfx/generated/images/src/__designer/blue_togglebars_toggle_round_large_button_on.cpp</FilePath>
 </File>
 <File>
+  <FileName>btn.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/btn.cpp</FilePath>
+</File>
+<File>
+  <FileName>btn_pressed.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/btn_pressed.cpp</FilePath>
+</File>
+<File>
   <FileName>Font_verdana_10_4bpp.cpp</FileName>
   <FileType>8</FileType>
   <FilePath>../touchgfx/generated/fonts/src/font_verdana_10_4bpp.cpp</FilePath>

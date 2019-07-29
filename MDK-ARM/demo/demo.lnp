@@ -80,6 +80,8 @@
 "demo\blue_buttons_round_small_pressed.o"
 "demo\blue_togglebars_toggle_round_large_button_off.o"
 "demo\blue_togglebars_toggle_round_large_button_on.o"
+"demo\btn.o"
+"demo\btn_pressed.o"
 "demo\font_verdana_10_4bpp.o"
 "demo\font_verdana_20_4bpp.o"
 "demo\font_verdana_40_4bpp.o"

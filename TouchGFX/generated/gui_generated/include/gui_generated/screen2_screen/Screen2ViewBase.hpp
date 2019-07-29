@@ -11,6 +11,7 @@
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/ToggleButton.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/widgets/Image.hpp>
 
 class Screen2ViewBase : public touchgfx::View<Screen2Presenter>
 {
@@ -40,6 +41,7 @@ protected:
     touchgfx::TextArea textArea1;
     touchgfx::ToggleButton toggleButton1;
     touchgfx::ButtonWithLabel buttonWithLabel1;
+    touchgfx::Image btn1;
 
 private:
 

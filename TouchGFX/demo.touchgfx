@@ -330,6 +330,21 @@
             "Clickable": false,
             "Fadeable": false,
             "Moveable": false
+          },
+          {
+            "RelativeFilename": "btn.png",
+            "Alpha": 255,
+            "Name": "btn1",
+            "X": 61,
+            "Y": 171,
+            "Width": 130,
+            "Height": 56,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
           }
         ],
         "Interactions": [

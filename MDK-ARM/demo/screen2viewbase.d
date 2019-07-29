@@ -63,6 +63,7 @@ demo\screen2viewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/to
 demo\screen2viewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Button.hpp
 demo\screen2viewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp
 demo\screen2viewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp
+demo\screen2viewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Image.hpp
 demo\screen2viewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/Color.hpp
 demo\screen2viewbase.o: ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp
 demo\screen2viewbase.o: ../TouchGFX/generated/images/include/BitmapDatabase.hpp

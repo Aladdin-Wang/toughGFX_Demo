@@ -28,10 +28,14 @@ Screen2ViewBase::Screen2ViewBase() :
     buttonWithLabel1.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     buttonWithLabel1.setAction(buttonCallback);
 
+    btn1.setXY(61, 171);
+    btn1.setBitmap(Bitmap(BITMAP_BTN_ID));
+
     add(box1);
     add(textArea1);
     add(toggleButton1);
     add(buttonWithLabel1);
+    add(btn1);
 }
 
 void Screen2ViewBase::setupScreen()
