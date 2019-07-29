@@ -3,7 +3,7 @@
 <title>Static Call Graph - [demo\demo.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image demo\demo.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Jul 29 14:45:23 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Jul 29 15:34:00 2019
 <BR><P>
 <H3>Maximum Stack Usage =        400 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1259,12 +1259,12 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Screen1View::togglelight()
 <LI><a href="#[30e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::HAL& touchgfx::touchgfx_generic_init&lang;STM32F4HAL&rang;(touchgfx::DMA_Interface&, touchgfx::LCD&, touchgfx::TouchController&, short, short, unsigned short*, unsigned, unsigned)
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::HAL::tick()
+<LI><a href="#[311]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::finalizeTransition(touchgfx::Screen*, touchgfx::Presenter*, touchgfx::Transition*)
+<LI><a href="#[30f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::prepareTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::Transition**)
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Screen2ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::Drawable::invalidateRect(touchgfx::Rect&) const
 <LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::Drawable::moveRelative(short, short)
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Screen1ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)
-<LI><a href="#[311]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::finalizeTransition(touchgfx::Screen*, touchgfx::Presenter*, touchgfx::Transition*)
-<LI><a href="#[30f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::prepareTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::Transition**)
 </UL>
 
 <P><STRONG><a name="[f4]"></a>touchgfx::Application::switchScreen(touchgfx::Screen*)</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, application.o(.text))
@@ -2279,8 +2279,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::TextProvider::getNextLigature(unsigned char)
 </UL>
-<BR>[Address Reference Count : 2]<UL><LI> lcd.o(.constdata)
-<LI> font.o(.constdata)
+<BR>[Address Reference Count : 2]<UL><LI> font.o(.constdata)
+<LI> lcd.o(.constdata)
 </UL>
 <P><STRONG><a name="[9a]"></a>touchgfx::LCD::drawStringRTLInternal(short&, const touchgfx::Font*, unsigned char, touchgfx::TextProvider&, int, bool, const touchgfx::LCD::DrawStringInternalStruct*)</STRONG> (Thumb, 326 bytes, Stack size 80 bytes, lcd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = touchgfx::LCD::drawStringRTLInternal(short&, const touchgfx::Font*, unsigned char, touchgfx::TextProvider&, int, bool, const touchgfx::LCD::DrawStringInternalStruct*) &rArr; touchgfx::LCD::drawStringInternal(unsigned short*, const touchgfx::Rect*, short, short&, const touchgfx::Rect&, const touchgfx::LCD::StringVisuals*, unsigned char, touchgfx::TextProvider&, int, bool) &rArr; touchgfx::TextProvider::getNextLigature(unsigned char) &rArr; touchgfx::TextProvider::getNextCharInternal()
@@ -2817,9 +2817,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;abort
 <LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__assert_puts
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::TypedText::assertValid() const
-<LI><a href="#[306]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;T2* touchgfx::makeTransition&lang;Screen2View, Screen2Presenter, touchgfx::NoTransition, Model&rang;(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, T4*)
+<BR>[Called By]<UL><LI><a href="#[306]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;T2* touchgfx::makeTransition&lang;Screen2View, Screen2Presenter, touchgfx::NoTransition, Model&rang;(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, T4*)
 <LI><a href="#[305]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;T2* touchgfx::makeTransition&lang;Screen1View, Screen1Presenter, touchgfx::NoTransition, Model&rang;(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, T4*)
+<LI><a href="#[2ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::TypedText::assertValid() const
 </UL>
 
 <P><STRONG><a name="[3ac]"></a>__assert</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, assert.o(.text), UNUSED)
@@ -4522,34 +4522,34 @@ Global Symbols
 <P><STRONG><a name="[2e0]"></a>getFont_verdana_10_4bpp()</STRONG> (Thumb, 78 bytes, Stack size 40 bytes, fontgetters.o(i._Z23getFont_verdana_10_4bppv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = getFont_verdana_10_4bpp() &rArr; touchgfx::InternalFlashFont::InternalFlashFont(const touchgfx::GlyphNode*, unsigned short, unsigned short, unsigned char, unsigned char, unsigned char, unsigned char, const unsigned char*, const touchgfx::KerningNode*, unsigned short, unsigned short) &rArr; touchgfx::ConstFont::ConstFont__sub_object(const touchgfx::GlyphNode*, unsigned short, unsigned short, unsigned char, unsigned char, unsigned char, unsigned char, unsigned short, unsigned short)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<BR>[Calls]<UL><LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::InternalFlashFont::InternalFlashFont(const touchgfx::GlyphNode*, unsigned short, unsigned short, unsigned char, unsigned char, unsigned char, unsigned char, const unsigned char*, const touchgfx::KerningNode*, unsigned short, unsigned short)
+<LI><a href="#[2e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
-<LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::InternalFlashFont::InternalFlashFont(const touchgfx::GlyphNode*, unsigned short, unsigned short, unsigned char, unsigned char, unsigned char, unsigned char, const unsigned char*, const touchgfx::KerningNode*, unsigned short, unsigned short)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sti___21_typedtextdatabase_cpp_42ef4e5b
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ApplicationFontProvider::getFont(unsigned short)
+<BR>[Called By]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ApplicationFontProvider::getFont(unsigned short)
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sti___21_typedtextdatabase_cpp_42ef4e5b
 </UL>
 
 <P><STRONG><a name="[2e2]"></a>getFont_verdana_20_4bpp()</STRONG> (Thumb, 82 bytes, Stack size 40 bytes, fontgetters.o(i._Z23getFont_verdana_20_4bppv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = getFont_verdana_20_4bpp() &rArr; touchgfx::InternalFlashFont::InternalFlashFont(const touchgfx::GlyphNode*, unsigned short, unsigned short, unsigned char, unsigned char, unsigned char, unsigned char, const unsigned char*, const touchgfx::KerningNode*, unsigned short, unsigned short) &rArr; touchgfx::ConstFont::ConstFont__sub_object(const touchgfx::GlyphNode*, unsigned short, unsigned short, unsigned char, unsigned char, unsigned char, unsigned char, unsigned short, unsigned short)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<BR>[Calls]<UL><LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::InternalFlashFont::InternalFlashFont(const touchgfx::GlyphNode*, unsigned short, unsigned short, unsigned char, unsigned char, unsigned char, unsigned char, const unsigned char*, const touchgfx::KerningNode*, unsigned short, unsigned short)
+<LI><a href="#[2e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
-<LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::InternalFlashFont::InternalFlashFont(const touchgfx::GlyphNode*, unsigned short, unsigned short, unsigned char, unsigned char, unsigned char, unsigned char, const unsigned char*, const touchgfx::KerningNode*, unsigned short, unsigned short)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sti___21_typedtextdatabase_cpp_42ef4e5b
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ApplicationFontProvider::getFont(unsigned short)
+<BR>[Called By]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ApplicationFontProvider::getFont(unsigned short)
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sti___21_typedtextdatabase_cpp_42ef4e5b
 </UL>
 
 <P><STRONG><a name="[2e3]"></a>getFont_verdana_40_4bpp()</STRONG> (Thumb, 80 bytes, Stack size 40 bytes, fontgetters.o(i._Z23getFont_verdana_40_4bppv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = getFont_verdana_40_4bpp() &rArr; touchgfx::InternalFlashFont::InternalFlashFont(const touchgfx::GlyphNode*, unsigned short, unsigned short, unsigned char, unsigned char, unsigned char, unsigned char, const unsigned char*, const touchgfx::KerningNode*, unsigned short, unsigned short) &rArr; touchgfx::ConstFont::ConstFont__sub_object(const touchgfx::GlyphNode*, unsigned short, unsigned short, unsigned char, unsigned char, unsigned char, unsigned char, unsigned short, unsigned short)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
+<BR>[Calls]<UL><LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::InternalFlashFont::InternalFlashFont(const touchgfx::GlyphNode*, unsigned short, unsigned short, unsigned char, unsigned char, unsigned char, unsigned char, const unsigned char*, const touchgfx::KerningNode*, unsigned short, unsigned short)
+<LI><a href="#[2e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_guard_acquire
 <LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_atexit
-<LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::InternalFlashFont::InternalFlashFont(const touchgfx::GlyphNode*, unsigned short, unsigned short, unsigned char, unsigned char, unsigned char, unsigned char, const unsigned char*, const touchgfx::KerningNode*, unsigned short, unsigned short)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sti___21_typedtextdatabase_cpp_42ef4e5b
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ApplicationFontProvider::getFont(unsigned short)
+<BR>[Called By]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ApplicationFontProvider::getFont(unsigned short)
+<LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sti___21_typedtextdatabase_cpp_42ef4e5b
 </UL>
 
 <P><STRONG><a name="[9e]"></a>STM32F4DMA::initialize()</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, stm32f4dma.o(i._ZN10STM32F4DMA10initializeEv))
@@ -5342,9 +5342,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = touchgfx::Widget::Widget__sub_object()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Screen1ViewBase::Screen1ViewBase()
+<LI><a href="#[2f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Screen2ViewBase::Screen2ViewBase()
 <LI><a href="#[2fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::TextArea::TextArea()
 <LI><a href="#[2f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::Button::Button()
-<LI><a href="#[2f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Screen2ViewBase::Screen2ViewBase()
 </UL>
 
 <P><STRONG><a name="[304]"></a>touchgfx::Callback&lang;FrontendApplicationBase, void, void, void&rang;::operator =(const touchgfx::Callback&lang;FrontendApplicationBase, void, void, void&rang;&)</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, frontendapplicationbase.o(i._ZN8touchgfx8CallbackI23FrontendApplicationBasevvvEaSERKS2_))
@@ -6242,11 +6242,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Screen1View::Screen1View()
 <LI><a href="#[357]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Screen1Presenter::Screen1Presenter(Screen1View&)
-<LI><a href="#[1fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
 <LI><a href="#[355]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;T1& touchgfx::AbstractPartition::at&lang;touchgfx::NoTransition&rang;(unsigned short)
 <LI><a href="#[356]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::NoTransition::NoTransition()
 <LI><a href="#[311]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::finalizeTransition(touchgfx::Screen*, touchgfx::Presenter*, touchgfx::Transition*)
 <LI><a href="#[30f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::prepareTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::Transition**)
+<LI><a href="#[1fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
 </UL>
 <BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FrontendApplicationBase::gotoScreen1ScreenNoTransitionImpl()
 </UL>
@@ -6256,12 +6256,12 @@ Global Symbols
 <LI>Call Chain = T2* touchgfx::makeTransition&lang;Screen2View, Screen2Presenter, touchgfx::NoTransition, Model&rang;(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, T4*) &rArr; Screen2View::Screen2View() &rArr; Screen2ViewBase::Screen2ViewBase() &rArr; touchgfx::TypedText::assertValid() const &rArr; __aeabi_assert &rArr; abort &rArr; __rt_SIGABRT &rArr; __rt_SIGABRT_inner &rArr; __default_signal_display
 </UL>
 <BR>[Calls]<UL><LI><a href="#[358]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Screen2Presenter::Screen2Presenter(Screen2View&)
-<LI><a href="#[1fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
 <LI><a href="#[355]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;T1& touchgfx::AbstractPartition::at&lang;touchgfx::NoTransition&rang;(unsigned short)
 <LI><a href="#[356]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::NoTransition::NoTransition()
 <LI><a href="#[311]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::finalizeTransition(touchgfx::Screen*, touchgfx::Presenter*, touchgfx::Transition*)
 <LI><a href="#[30f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::prepareTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::Transition**)
 <LI><a href="#[2ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Screen2View::Screen2View()
+<LI><a href="#[1fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_assert
 </UL>
 <BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FrontendApplicationBase::gotoScreen2ScreenNoTransitionImpl()
 </UL>
