@@ -20,3 +20,11 @@ void Model::set_light_onoff(uint8_t data)
 {
 	osMessagePut(gui_msg_qHandle,data,200);
 }
+void Model::ReadDID()
+{
+
+}
+void Model::ClearDID()
+{
+
+}

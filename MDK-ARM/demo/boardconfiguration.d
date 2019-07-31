@@ -73,6 +73,7 @@ demo\boardconfiguration.o: ../TouchGFX/gui/include/gui/did_screen/DIDView.hpp
 demo\boardconfiguration.o: ../TouchGFX/generated/gui_generated/include/gui_generated/did_screen/DIDViewBase.hpp
 demo\boardconfiguration.o: ../TouchGFX/gui/include/gui/did_screen/DIDPresenter.hpp
 demo\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp
+demo\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp
 demo\boardconfiguration.o: ../TouchGFX/gui/include/gui/dtc_screen/DTCView.hpp
 demo\boardconfiguration.o: ../TouchGFX/generated/gui_generated/include/gui_generated/dtc_screen/DTCViewBase.hpp
 demo\boardconfiguration.o: ../TouchGFX/gui/include/gui/dtc_screen/DTCPresenter.hpp

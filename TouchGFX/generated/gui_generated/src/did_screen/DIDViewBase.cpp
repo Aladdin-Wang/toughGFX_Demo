@@ -12,45 +12,51 @@ DIDViewBase::DIDViewBase() :
     box1.setPosition(0, 0, 800, 480);
     box1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 255, 255));
 
-    buttonWithLabel1.setXY(53, 348);
-    buttonWithLabel1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_SMALL_PRESSED_ID));
-    buttonWithLabel1.setLabelText(TypedText(T_SINGLEUSEID4));
-    buttonWithLabel1.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    buttonWithLabel1.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    buttonWithLabel1.setAction(buttonCallback);
+    buttonWithReturn.setXY(53, 348);
+    buttonWithReturn.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_SMALL_PRESSED_ID));
+    buttonWithReturn.setLabelText(TypedText(T_SINGLEUSEID4));
+    buttonWithReturn.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonWithReturn.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonWithReturn.setAction(buttonCallback);
 
-    buttonWithLabel2.setXY(48, 91);
-    buttonWithLabel2.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    buttonWithLabel2.setLabelText(TypedText(T_SINGLEUSEID9));
-    buttonWithLabel2.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    buttonWithLabel2.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonWithRead.setXY(48, 91);
+    buttonWithRead.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    buttonWithRead.setLabelText(TypedText(T_SINGLEUSEID9));
+    buttonWithRead.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonWithRead.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonWithRead.setAction(buttonCallback);
 
-    buttonWithLabel3.setXY(48, 216);
-    buttonWithLabel3.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
-    buttonWithLabel3.setLabelText(TypedText(T_SINGLEUSEID10));
-    buttonWithLabel3.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    buttonWithLabel3.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonWithClear.setXY(48, 216);
+    buttonWithClear.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    buttonWithClear.setLabelText(TypedText(T_SINGLEUSEID10));
+    buttonWithClear.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonWithClear.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonWithClear.setAction(buttonCallback);
 
     box2.setPosition(248, 79, 515, 334);
     box2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
 
-    textArea1.setXY(248, 79);
-    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    textArea1.setLinespacing(0);
-    textArea1.setTypedText(TypedText(T_SINGLEUSEID14));
+    textHWVersion.setPosition(248, 79, 488, 29);
+    textHWVersion.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    textHWVersion.setLinespacing(0);
+    textHWVersionBuffer[0] = 0;
+    textHWVersion.setWildcard(textHWVersionBuffer);
+    textHWVersion.setTypedText(TypedText(T_SINGLEUSEID16));
 
-    textArea2.setXY(248, 104);
-    textArea2.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    textArea2.setLinespacing(0);
-    textArea2.setTypedText(TypedText(T_SINGLEUSEID15));
+    textSWVersion.setPosition(248, 108, 488, 26);
+    textSWVersion.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    textSWVersion.setLinespacing(0);
+    textSWVersionBuffer[0] = 0;
+    textSWVersion.setWildcard(textSWVersionBuffer);
+    textSWVersion.setTypedText(TypedText(T_SINGLEUSEID15));
 
     add(box1);
-    add(buttonWithLabel1);
-    add(buttonWithLabel2);
-    add(buttonWithLabel3);
+    add(buttonWithReturn);
+    add(buttonWithRead);
+    add(buttonWithClear);
     add(box2);
-    add(textArea1);
-    add(textArea2);
+    add(textHWVersion);
+    add(textSWVersion);
 }
 
 void DIDViewBase::setupScreen()
@@ -60,19 +66,25 @@ void DIDViewBase::setupScreen()
 
 void DIDViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &buttonWithLabel1)
+    if (&src == &buttonWithReturn)
     {
         //Interaction1
-        //When buttonWithLabel1 clicked change screen to HOME
+        //When buttonWithReturn clicked change screen to HOME
         //Go to HOME with no screen transition
         application().gotoHOMEScreenNoTransition();
     }
-    else if (&src == &buttonWithLabel2)
+    else if (&src == &buttonWithRead)
     {
-
+        //ButtonToRead
+        //When buttonWithRead clicked call virtual function
+        //Call ReadDIDClicked
+        ReadDIDClicked();
     }
-    else if (&src == &buttonWithLabel3)
+    else if (&src == &buttonWithClear)
     {
-
+        //ButtonToClearDID
+        //When buttonWithClear clicked call virtual function
+        //Call ClearDIDClicked
+        ClearDIDClicked();
     }
 }

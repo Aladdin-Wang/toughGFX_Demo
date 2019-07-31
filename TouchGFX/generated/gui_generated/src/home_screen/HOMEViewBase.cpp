@@ -16,36 +16,36 @@ HOMEViewBase::HOMEViewBase() :
     toggleButton1.setBitmaps(Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));
     toggleButton1.setAction(buttonCallback);
 
-    button1.setXY(55, 51);
-    button1.setBitmaps(Bitmap(BITMAP_B4_ID), Bitmap(BITMAP_B4_ID));
-    button1.setAction(buttonCallback);
+    buttonWithDID.setXY(55, 51);
+    buttonWithDID.setBitmaps(Bitmap(BITMAP_B4_ID), Bitmap(BITMAP_B4_ID));
+    buttonWithDID.setAction(buttonCallback);
 
     textArea1.setXY(77, 120);
     textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(TypedText(T_SINGLEUSEID5));
 
-    button3.setXY(278, 51);
-    button3.setBitmaps(Bitmap(BITMAP_B5_ID), Bitmap(BITMAP_B5_ID));
-    button3.setAction(buttonCallback);
+    buttonWithUpdata.setXY(278, 51);
+    buttonWithUpdata.setBitmaps(Bitmap(BITMAP_B5_ID), Bitmap(BITMAP_B5_ID));
+    buttonWithUpdata.setAction(buttonCallback);
 
     textArea2.setXY(289, 120);
     textArea2.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     textArea2.setLinespacing(0);
     textArea2.setTypedText(TypedText(T_SINGLEUSEID6));
 
-    button4.setXY(389, 51);
-    button4.setBitmaps(Bitmap(BITMAP_B7_ID), Bitmap(BITMAP_B7_ID));
-    button4.setAction(buttonCallback);
+    buttonWithKey.setXY(389, 51);
+    buttonWithKey.setBitmaps(Bitmap(BITMAP_B7_ID), Bitmap(BITMAP_B7_ID));
+    buttonWithKey.setAction(buttonCallback);
 
     textArea3.setXY(412, 120);
     textArea3.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     textArea3.setLinespacing(0);
     textArea3.setTypedText(TypedText(T_SINGLEUSEID7));
 
-    button2.setXY(165, 51);
-    button2.setBitmaps(Bitmap(BITMAP_B10_ID), Bitmap(BITMAP_B10_ID));
-    button2.setAction(buttonCallback);
+    buttonWithDTC.setXY(165, 51);
+    buttonWithDTC.setBitmaps(Bitmap(BITMAP_B10_ID), Bitmap(BITMAP_B10_ID));
+    buttonWithDTC.setAction(buttonCallback);
 
     textArea4.setXY(187, 120);
     textArea4.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
@@ -54,13 +54,13 @@ HOMEViewBase::HOMEViewBase() :
 
     add(box1);
     add(toggleButton1);
-    add(button1);
+    add(buttonWithDID);
     add(textArea1);
-    add(button3);
+    add(buttonWithUpdata);
     add(textArea2);
-    add(button4);
+    add(buttonWithKey);
     add(textArea3);
-    add(button2);
+    add(buttonWithDTC);
     add(textArea4);
 }
 
@@ -90,31 +90,31 @@ void HOMEViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //Call SwitchANT1
         SwitchANT1();
     }
-    else if (&src == &button1)
+    else if (&src == &buttonWithDID)
     {
-        //Interaction1
-        //When button1 clicked change screen to DID
+        //ButtonToDID
+        //When buttonWithDID clicked change screen to DID
         //Go to DID with no screen transition
         application().gotoDIDScreenNoTransition();
     }
-    else if (&src == &button3)
+    else if (&src == &buttonWithUpdata)
     {
-        //Interaction5
-        //When button3 clicked change screen to UPDATA
+        //ButtonToUpdata
+        //When buttonWithUpdata clicked change screen to UPDATA
         //Go to UPDATA with no screen transition
         application().gotoUPDATAScreenNoTransition();
     }
-    else if (&src == &button4)
+    else if (&src == &buttonWithKey)
     {
-        //Interaction6
-        //When button4 clicked change screen to DTC
-        //Go to DTC with no screen transition
-        application().gotoDTCScreenNoTransition();
+        //ButtonToKEY
+        //When buttonWithKey clicked change screen to KEY
+        //Go to KEY with no screen transition
+        application().gotoKEYScreenNoTransition();
     }
-    else if (&src == &button2)
+    else if (&src == &buttonWithDTC)
     {
-        //Interaction4
-        //When button2 clicked change screen to DTC
+        //ButtonToDTC
+        //When buttonWithDTC clicked change screen to DTC
         //Go to DTC with no screen transition
         application().gotoDTCScreenNoTransition();
     }

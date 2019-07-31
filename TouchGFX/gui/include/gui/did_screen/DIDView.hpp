@@ -11,6 +11,8 @@ public:
     virtual ~DIDView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void ReadDIDClicked();
+    virtual void ClearDIDClicked();
 protected:
 };
 

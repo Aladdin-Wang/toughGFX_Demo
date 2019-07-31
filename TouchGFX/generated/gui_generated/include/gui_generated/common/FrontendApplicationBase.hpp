@@ -30,6 +30,10 @@ public:
     // UPDATA
     void gotoUPDATAScreenNoTransition();
 
+
+    // KEY
+    void gotoKEYScreenNoTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -49,6 +53,10 @@ protected:
 
     // UPDATA
     void gotoUPDATAScreenNoTransitionImpl();
+
+
+    // KEY
+    void gotoKEYScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

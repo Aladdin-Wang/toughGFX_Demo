@@ -58,6 +58,7 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  generated/gui_generated/include/gui_generated/did_screen/DIDViewBase.hpp \
  gui/include/gui/did_screen/DIDPresenter.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  gui/include/gui/dtc_screen/DTCView.hpp \
  generated/gui_generated/include/gui_generated/dtc_screen/DTCViewBase.hpp \
  gui/include/gui/dtc_screen/DTCPresenter.hpp \
@@ -186,6 +187,8 @@ generated/gui_generated/include/gui_generated/did_screen/DIDViewBase.hpp:
 gui/include/gui/did_screen/DIDPresenter.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 
 gui/include/gui/dtc_screen/DTCView.hpp:
 

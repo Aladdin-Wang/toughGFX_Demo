@@ -119,6 +119,11 @@
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
+          <Key>DLGUARM</Key>
+          <Name>哥??Uw哥??Uw哥?</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
           <Key>ARMRTXEVENTFLAGS</Key>
           <Name>-L70 -Z18 -C0 -M0 -T1</Name>
         </SetRegEntry>
@@ -154,7 +159,7 @@
           <Type>0</Type>
           <LineNumber>557</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134273758</Address>
+          <Address>134277754</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -168,18 +173,18 @@
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>32</LineNumber>
+          <LineNumber>25</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134276032</Address>
+          <Address>134283880</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>C:\Users\akqbd\Desktop\TouchGFX\demo\touchgfx\gui\src\screen1_screen\screen1view.cpp</Filename>
+          <Filename>../touchgfx/gui/src/did_screen/didview.cpp</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\demo\../touchgfx/gui/src/screen1_screen/screen1view.cpp\32</Expression>
+          <Expression>\\demo\../touchgfx/gui/src/did_screen/didview.cpp\25</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -192,6 +197,11 @@
           <count>1</count>
           <WinNumber>1</WinNumber>
           <ItemText>pre_y</ItemText>
+        </Ww>
+        <Ww>
+          <count>2</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>textHWVersionBuffer,0x10</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
@@ -1092,7 +1102,7 @@
 
   <Group>
     <GroupName>Application/User/TouchGFX/gui</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1244,7 +1254,7 @@
 
   <Group>
     <GroupName>Application/User/TouchGFX/generated</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

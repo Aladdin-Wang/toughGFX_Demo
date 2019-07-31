@@ -44,7 +44,7 @@
             "Pressed": "b4.png",
             "Released": "b4.png",
             "Alpha": 255,
-            "Name": "button1",
+            "Name": "buttonWithDID",
             "X": 55,
             "Y": 51,
             "Width": 64,
@@ -83,7 +83,7 @@
             "Pressed": "b5.png",
             "Released": "b5.png",
             "Alpha": 255,
-            "Name": "button3",
+            "Name": "buttonWithUpdata",
             "X": 278,
             "Y": 51,
             "Width": 64,
@@ -122,7 +122,7 @@
             "Pressed": "b7.png",
             "Released": "b7.png",
             "Alpha": 255,
-            "Name": "button4",
+            "Name": "buttonWithKey",
             "X": 389,
             "Y": 51,
             "Width": 64,
@@ -161,7 +161,7 @@
             "Pressed": "b10.png",
             "Released": "b10.png",
             "Alpha": 255,
-            "Name": "button2",
+            "Name": "buttonWithDTC",
             "X": 165,
             "Y": 51,
             "Width": 64,
@@ -199,10 +199,10 @@
         ],
         "Interactions": [
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "ButtonToDID",
             "HasCompletedTrigger": false,
             "Trigger": {
-              "TriggerComponent": "button1",
+              "TriggerComponent": "buttonWithDID",
               "Type": "TriggerClicked"
             },
             "Action": {
@@ -236,10 +236,10 @@
             }
           },
           {
-            "InteractionName": "Interaction4",
+            "InteractionName": "ButtonToDTC",
             "HasCompletedTrigger": false,
             "Trigger": {
-              "TriggerComponent": "button2",
+              "TriggerComponent": "buttonWithDTC",
               "Type": "TriggerClicked"
             },
             "Action": {
@@ -249,10 +249,10 @@
             }
           },
           {
-            "InteractionName": "Interaction5",
+            "InteractionName": "ButtonToUpdata",
             "HasCompletedTrigger": false,
             "Trigger": {
-              "TriggerComponent": "button3",
+              "TriggerComponent": "buttonWithUpdata",
               "Type": "TriggerClicked"
             },
             "Action": {
@@ -262,15 +262,15 @@
             }
           },
           {
-            "InteractionName": "Interaction6",
+            "InteractionName": "ButtonToKEY",
             "HasCompletedTrigger": false,
             "Trigger": {
-              "TriggerComponent": "button4",
+              "TriggerComponent": "buttonWithKey",
               "Type": "TriggerClicked"
             },
             "Action": {
               "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "DTC",
+              "ActionComponent": "KEY",
               "Type": "ActionGotoScreen"
             }
           }
@@ -317,7 +317,7 @@
             },
             "TextRotation": "0",
             "Style": "Style8",
-            "Name": "buttonWithLabel1",
+            "Name": "buttonWithReturn",
             "X": 53,
             "Y": 348,
             "Width": 170,
@@ -346,7 +346,7 @@
             },
             "TextRotation": "0",
             "Style": "Style4",
-            "Name": "buttonWithLabel2",
+            "Name": "buttonWithRead",
             "X": 48,
             "Y": 91,
             "Width": 170,
@@ -375,7 +375,7 @@
             },
             "TextRotation": "0",
             "Style": "Style4",
-            "Name": "buttonWithLabel3",
+            "Name": "buttonWithClear",
             "X": 48,
             "Y": 216,
             "Width": 170,
@@ -407,7 +407,7 @@
             "Moveable": false
           },
           {
-            "TextId": "SingleUseId14",
+            "TextId": "SingleUseId16",
             "TextRotation": "0",
             "Color": {
               "Red": 255,
@@ -415,13 +415,17 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
-            "Name": "textArea1",
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 25
+            },
+            "Name": "textHWVersion",
             "X": 248,
             "Y": 79,
-            "Width": 180,
-            "Height": 25,
+            "Width": 488,
+            "Height": 29,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -438,13 +442,17 @@
               "Blue": 255
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
-            "Name": "textArea2",
+            "Wildcard1": {
+              "UseBuffer": true,
+              "BufferSize": 10
+            },
+            "Name": "textSWVersion",
             "X": 248,
-            "Y": 104,
-            "Width": 172,
-            "Height": 25,
+            "Y": 108,
+            "Width": 488,
+            "Height": 26,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -458,13 +466,37 @@
             "InteractionName": "Interaction1",
             "HasCompletedTrigger": false,
             "Trigger": {
-              "TriggerComponent": "buttonWithLabel1",
+              "TriggerComponent": "buttonWithReturn",
               "Type": "TriggerClicked"
             },
             "Action": {
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "HOME",
               "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "ButtonToRead",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "buttonWithRead",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "ReadDIDClicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "ButtonToClearDID",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "buttonWithClear",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "ClearDIDClicked",
+              "Type": "ActionCustom"
             }
           }
         ],
@@ -724,11 +756,11 @@
         "IsResource": false
       },
       {
-        "TextEntryId": "SingleUseId14",
+        "TextEntryId": "SingleUseId15",
         "IsResource": false
       },
       {
-        "TextEntryId": "SingleUseId15",
+        "TextEntryId": "SingleUseId16",
         "IsResource": false
       }
     ],

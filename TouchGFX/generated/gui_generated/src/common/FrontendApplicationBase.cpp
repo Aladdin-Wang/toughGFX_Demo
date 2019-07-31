@@ -85,3 +85,16 @@ void FrontendApplicationBase::gotoUPDATAScreenNoTransitionImpl()
     makeTransition<UPDATAView, UPDATAPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
+// KEY
+
+void FrontendApplicationBase::gotoKEYScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoKEYScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoKEYScreenNoTransitionImpl()
+{
+    makeTransition<KEYView, KEYPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+

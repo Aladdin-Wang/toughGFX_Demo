@@ -70,6 +70,7 @@ demo\frontendapplicationbase.o: ../TouchGFX/gui/include/gui/did_screen/DIDView.h
 demo\frontendapplicationbase.o: ../TouchGFX/generated/gui_generated/include/gui_generated/did_screen/DIDViewBase.hpp
 demo\frontendapplicationbase.o: ../TouchGFX/gui/include/gui/did_screen/DIDPresenter.hpp
 demo\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp
+demo\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp
 demo\frontendapplicationbase.o: ../TouchGFX/gui/include/gui/dtc_screen/DTCView.hpp
 demo\frontendapplicationbase.o: ../TouchGFX/generated/gui_generated/include/gui_generated/dtc_screen/DTCViewBase.hpp
 demo\frontendapplicationbase.o: ../TouchGFX/gui/include/gui/dtc_screen/DTCPresenter.hpp
