@@ -26,7 +26,14 @@ public:
     virtual void deactivate();
 
     virtual ~DIDPresenter() {};
-
+    void ReadDID()  
+    {
+        model->ReadDID();
+    }
+    void ClearDID()
+    {
+        model->ClearDID();
+    }
 private:
     DIDPresenter();
 

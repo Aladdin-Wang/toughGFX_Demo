@@ -30,7 +30,7 @@ public:
 		{
 			model->set_light_onoff(data);
 		}
-		virtual void key_event();
+	virtual void key_event();
 private:
     HOMEPresenter();
 

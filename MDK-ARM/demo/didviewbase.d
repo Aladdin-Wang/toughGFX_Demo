@@ -60,6 +60,7 @@ demo\didviewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchg
 demo\didviewbase.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\cassert
 demo\didviewbase.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 demo\didviewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/Texts.hpp
+demo\didviewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp
 demo\didviewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp
 demo\didviewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/FontManager.hpp
 demo\didviewbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/Color.hpp

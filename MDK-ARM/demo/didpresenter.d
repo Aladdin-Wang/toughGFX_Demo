@@ -61,5 +61,6 @@ demo\didpresenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touch
 demo\didpresenter.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\cassert
 demo\didpresenter.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 demo\didpresenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/Texts.hpp
+demo\didpresenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp
 demo\didpresenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp
 demo\didpresenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/FontManager.hpp

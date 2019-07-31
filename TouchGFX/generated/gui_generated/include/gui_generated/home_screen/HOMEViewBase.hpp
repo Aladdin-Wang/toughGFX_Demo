@@ -44,13 +44,13 @@ protected:
      */
     touchgfx::Box box1;
     touchgfx::ToggleButton toggleButton1;
-    touchgfx::Button button1;
+    touchgfx::Button buttonWithDID;
     touchgfx::TextArea textArea1;
-    touchgfx::Button button3;
+    touchgfx::Button buttonWithUpdata;
     touchgfx::TextArea textArea2;
-    touchgfx::Button button4;
+    touchgfx::Button buttonWithKey;
     touchgfx::TextArea textArea3;
-    touchgfx::Button button2;
+    touchgfx::Button buttonWithDTC;
     touchgfx::TextArea textArea4;
 
 private:

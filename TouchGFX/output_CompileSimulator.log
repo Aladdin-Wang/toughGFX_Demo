@@ -1,33 +1,33 @@
 Converting images
 Compiling gui/src/home_screen/HOMEPresenter.cpp
-Compiling gui/src/home_screen/HOMEView.cpp
 Compiling gui/src/model/Model.cpp
-Compiling generated/gui_generated/src/home_screen/HOMEViewBase.cpp
-Compiling generated/gui_generated/src/key_screen/KEYViewBase.cpp
-Compiling generated/gui_generated/src/dtc_screen/DTCViewBase.cpp
-Compiling generated/gui_generated/src/updata_screen/UPDATAViewBase.cpp
-Compiling generated/fonts/src/ApplicationFontProvider.cpp
-Compiling generated/gui_generated/src/did_screen/DIDViewBase.cpp
-Compiling generated/images/src/BitmapDatabase.cpp
+Compiling gui/src/home_screen/HOMEView.cpp
+Compiling gui/src/did_screen/DIDView.cpp
+Compiling generated/fonts/src/Font_verdana_40_4bpp.cpp
+Compiling generated/fonts/src/Font_verdana_20_4bpp.cpp
+Compiling generated/fonts/src/Kerning_verdana_40_4bpp.cpp
+Compiling generated/fonts/src/Table_verdana_10_4bpp.cpp
+Compiling generated/fonts/src/Kerning_verdana_20_4bpp.cpp
+Compiling generated/fonts/src/FontGetters.cpp
 gui/src/model/Model.cpp:3:22: fatal error: cmsis_os.h: No such file or directory
  #include "cmsis_os.h"
                       ^
+compilation terminated.
+simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/model/Model.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/model/Model.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+gui/src/home_screen/HOMEPresenter.cpp:3:18: fatal error: main.h: No such file or directory
+ #include "main.h"
+                  ^
 compilation terminated.
 gui/src/home_screen/HOMEView.cpp:2:18: fatal error: main.h: No such file or directory
  #include "main.h"
                   ^
 compilation terminated.
-gui/src/home_screen/HOMEPresenter.cpp:3:18: fatal error: main.h: No such file or directory
- #include "main.h"
-                  ^
-compilation terminated.
-simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/model/Model.o' failed
-make[2]: *** [build/MINGW32_NT-6.2/gui/src/model/Model.o] Error 1
-make[2]: *** Waiting for unfinished jobs....
-simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/home_screen/HOMEView.o' failed
-make[2]: *** [build/MINGW32_NT-6.2/gui/src/home_screen/HOMEView.o] Error 1
 simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/home_screen/HOMEPresenter.o' failed
 make[2]: *** [build/MINGW32_NT-6.2/gui/src/home_screen/HOMEPresenter.o] Error 1
+simulator/gcc/Makefile:220: recipe for target 'build/MINGW32_NT-6.2/gui/src/home_screen/HOMEView.o' failed
+make[2]: *** [build/MINGW32_NT-6.2/gui/src/home_screen/HOMEView.o] Error 1
 simulator/gcc/Makefile:182: recipe for target 'generate_assets' failed
 make[1]: *** [generate_assets] Error 2
 simulator/gcc/Makefile:40: recipe for target 'all' failed

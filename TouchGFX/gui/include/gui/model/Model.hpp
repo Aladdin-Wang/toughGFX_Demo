@@ -36,7 +36,8 @@ public:
      */
     void tick();
 	void set_light_onoff(uint8_t data);
-      
+    void ReadDID();  
+    void ClearDID();  
 protected:
     /**
      * Pointer to the currently active presenter.

@@ -9,7 +9,7 @@
 #include <gui/did_screen/DIDPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class DIDViewBase : public touchgfx::View<DIDPresenter>
 {
@@ -18,6 +18,19 @@ public:
     virtual ~DIDViewBase() {}
 
     virtual void setupScreen();
+
+    /*
+     * Custom Action Handlers
+     */
+    virtual void ReadDIDClicked()
+    {
+        // Override and implement this function in DIDView
+    }
+
+    virtual void ClearDIDClicked()
+    {
+        // Override and implement this function in DIDView
+    }
 
 protected:
     FrontendApplication& application() {
@@ -28,12 +41,20 @@ protected:
      * Member Declarations
      */
     touchgfx::Box box1;
-    touchgfx::ButtonWithLabel buttonWithLabel1;
-    touchgfx::ButtonWithLabel buttonWithLabel2;
-    touchgfx::ButtonWithLabel buttonWithLabel3;
+    touchgfx::ButtonWithLabel buttonWithReturn;
+    touchgfx::ButtonWithLabel buttonWithRead;
+    touchgfx::ButtonWithLabel buttonWithClear;
     touchgfx::Box box2;
-    touchgfx::TextArea textArea1;
-    touchgfx::TextArea textArea2;
+    touchgfx::TextAreaWithOneWildcard textHWVersion;
+    touchgfx::TextAreaWithOneWildcard textSWVersion;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXTHWVERSION_SIZE = 25;
+    touchgfx::Unicode::UnicodeChar textHWVersionBuffer[TEXTHWVERSION_SIZE];
+    static const uint16_t TEXTSWVERSION_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar textSWVersionBuffer[TEXTSWVERSION_SIZE];
 
 private:
 
