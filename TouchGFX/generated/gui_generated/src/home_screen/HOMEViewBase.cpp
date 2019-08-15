@@ -10,7 +10,7 @@ HOMEViewBase::HOMEViewBase() :
     buttonCallback(this, &HOMEViewBase::buttonCallbackHandler)
 {
     box1.setPosition(0, 0, 800, 480);
-    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(112, 64, 69));
+    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(101, 66, 71));
 
     toggleButton1.setXY(332, 358);
     toggleButton1.setBitmaps(Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_OFF_ID), Bitmap(BITMAP_BLUE_TOGGLEBARS_TOGGLE_ROUND_LARGE_BUTTON_ON_ID));

@@ -89,6 +89,8 @@ void   MX_SPI5_Init(void);
 #define UBP_KEY  1
 #define UBP_LIGHT_OFF 2
 #define UBP_LIGHT_ON  3
+#define UBP_REFRESH  4
+#define UBP_START  5
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

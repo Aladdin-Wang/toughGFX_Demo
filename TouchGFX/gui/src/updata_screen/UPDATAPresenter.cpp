@@ -15,3 +15,7 @@ void UPDATAPresenter::deactivate()
 {
 
 }
+void UPDATAPresenter::RtextSDCardView(uint8_t * data)
+{
+    view.RtextSDCardView(data);
+}

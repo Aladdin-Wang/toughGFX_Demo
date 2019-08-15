@@ -61,3 +61,11 @@ demo\updataview.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgf
 demo\updataview.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\cassert
 demo\updataview.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 demo\updataview.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/Texts.hpp
+demo\updataview.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/progress_indicators/BoxProgress.hpp
+demo\updataview.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp
+demo\updataview.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp
+demo\updataview.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Image.hpp
+demo\updataview.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp
+demo\updataview.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/FontManager.hpp
+demo\updataview.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp
+demo\updataview.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp

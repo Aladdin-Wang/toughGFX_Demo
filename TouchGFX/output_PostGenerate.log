@@ -109,6 +109,11 @@
   <FilePath>../touchgfx/generated/images/src/__designer/blue_buttons_round_small_pressed.cpp</FilePath>
 </File>
 <File>
+  <FileName>blue_progressindicators_bg_small_progress_indicator_bg_square_0_degrees.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../touchgfx/generated/images/src/__designer/blue_progressindicators_bg_small_progress_indicator_bg_square_0_degrees.cpp</FilePath>
+</File>
+<File>
   <FileName>blue_togglebars_toggle_round_large_button_off.cpp</FileName>
   <FileType>8</FileType>
   <FilePath>../touchgfx/generated/images/src/__designer/blue_togglebars_toggle_round_large_button_off.cpp</FilePath>

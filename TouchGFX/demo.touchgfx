@@ -5,9 +5,9 @@
         "Components": [
           {
             "Color": {
-              "Red": 112,
-              "Green": 64,
-              "Blue": 69
+              "Red": 101,
+              "Green": 66,
+              "Blue": 71
             },
             "Alpha": 255,
             "Name": "box1",
@@ -463,7 +463,7 @@
         ],
         "Interactions": [
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "ButtonToReturn",
             "HasCompletedTrigger": false,
             "Trigger": {
               "TriggerComponent": "buttonWithReturn",
@@ -610,12 +610,195 @@
               "Blue": 255
             },
             "TextRotation": "0",
-            "Name": "buttonWithLabel1",
+            "Name": "buttonWithReturn",
             "X": 30,
-            "Y": 348,
+            "Y": 341,
             "Width": 170,
             "Height": 60,
             "Type": "ButtonWithLabel",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_small.png",
+            "Alpha": 255,
+            "TextId": "SingleUseId17",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4",
+            "Name": "buttonWithRefresh",
+            "X": 30,
+            "Y": 85,
+            "Width": 170,
+            "Height": 60,
+            "Type": "ButtonWithLabel",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_small.png",
+            "Alpha": 255,
+            "TextId": "SingleUseId18",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style4",
+            "Name": "buttonWithStart",
+            "X": 30,
+            "Y": 210,
+            "Width": 170,
+            "Height": 60,
+            "Type": "ButtonWithLabel",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 5
+            },
+            "Alpha": 255,
+            "Name": "box2",
+            "X": 256,
+            "Y": 75,
+            "Width": 482,
+            "Height": 258,
+            "Type": "Box",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 0,
+              "Green": 151,
+              "Blue": 255
+            },
+            "Direction": "Right",
+            "Alpha": 255,
+            "Style": "Style1",
+            "FileNameBackground": "__designer\\blue_progressindicators_bg_small_progress_indicator_bg_square_0_degrees.png",
+            "IndicatorPositionX": 2,
+            "IndicatorPositionY": 2,
+            "IndicatorPositionWidth": 100,
+            "IndicatorPositionHeight": 10,
+            "ProgressRangeMin": 0,
+            "ProgressRangeMax": 100,
+            "ProgressRangeSteps": 0,
+            "ProgressRangeStepsMin": 0,
+            "ProgressInitialValue": 50,
+            "Name": "boxProgress1",
+            "X": 452,
+            "Y": 394,
+            "Width": 104,
+            "Height": 14,
+            "Type": "BoxProgress",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId19",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "textArea1",
+            "X": 359,
+            "Y": 395,
+            "Width": 87,
+            "Height": 13,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Components": [
+              {
+                "TextId": "SingleUseId20",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "Alpha": 255,
+                "AutoSize": false,
+                "LineSpacing": 0,
+                "Wildcard1": {
+                  "UseBuffer": true,
+                  "BufferSize": 50
+                },
+                "Name": "longText",
+                "X": 0,
+                "Y": 0,
+                "Width": 482,
+                "Height": 308,
+                "Type": "TextArea",
+                "Visible": true,
+                "Draggable": false,
+                "Clickable": false,
+                "Fadeable": false,
+                "Moveable": false
+              }
+            ],
+            "HorizontalScrollEnabled": true,
+            "VerticalScrollEnabled": true,
+            "ScrollbarsVisible": true,
+            "ScrollbarsVisibleOnPressed": false,
+            "ScrollbarsColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "ScrollbarsAlpha": 255,
+            "Name": "scrollableContainer1",
+            "X": 256,
+            "Y": 75,
+            "Width": 484,
+            "Height": 258,
+            "Type": "ScrollableContainer",
             "Visible": true,
             "Draggable": false,
             "Clickable": false,
@@ -625,16 +808,40 @@
         ],
         "Interactions": [
           {
-            "InteractionName": "Interaction1",
+            "InteractionName": "ButtonToReturn",
             "HasCompletedTrigger": false,
             "Trigger": {
-              "TriggerComponent": "buttonWithLabel1",
+              "TriggerComponent": "buttonWithReturn",
               "Type": "TriggerClicked"
             },
             "Action": {
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "HOME",
               "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "ButtonToRefresh",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "buttonWithRefresh",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "RefreshDataClicked",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "ButtonToStart",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "buttonWithStart",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "StartUpClicked",
+              "Type": "ActionCustom"
             }
           }
         ],
@@ -762,6 +969,22 @@
       {
         "TextEntryId": "SingleUseId16",
         "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId17",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId18",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId19",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId20",
+        "IsResource": false
       }
     ],
     "Name": "MyApplication",
@@ -780,11 +1003,11 @@
       "Version": "1.0.0",
       "Description": "STM32CubeMX Generated Simulator Application Template",
       "AvailableColorDepths": [
-        24
+       24
       ],
       "AvailableImageFormats": {
-        "24": {
-          "Opaque": "RGB888",
+       "24": {
+      "Opaque": "RGB888",
           "NonOpaque": "ARGB8888"
         }
       },

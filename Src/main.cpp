@@ -25,12 +25,15 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <string.h>
+#include <stdio.h>
 
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+uint8_t rtextSDCardViewBuffer[40];
+uint16_t osCPU_Usage =0;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -58,6 +61,7 @@ osThreadId defaultTaskHandle;
 osThreadId LEDTaskHandle;
 osThreadId GUITaskHandle;
 osMessageQId gui_msg_qHandle;
+osMessageQId hal_msg_qHandle;
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -120,9 +124,7 @@ int main(void)
   MX_USART1_UART_Init();
   MX_SDIO_SD_Init();
   /* USER CODE BEGIN 2 */
-	MX_SPI5_Init();
-	__HAL_SPI_ENABLE(&hspi5);                    //使锟斤拷SPI5
-	 
+ 
   /* USER CODE END 2 */
 
 /* Initialise the graphical hardware */
@@ -147,8 +149,12 @@ int main(void)
 
   /* Create the queue(s) */
   /* definition and creation of gui_msg_q */
-  osMessageQDef(gui_msg_q, 16, uint16_t);
+  osMessageQDef(gui_msg_q, 8, uint32_t);
   gui_msg_qHandle = osMessageCreate(osMessageQ(gui_msg_q), NULL);
+
+  /* definition and creation of hal_msg_q */
+  osMessageQDef(hal_msg_q, 16, uint32_t);
+  hal_msg_qHandle = osMessageCreate(osMessageQ(hal_msg_q), NULL);
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
@@ -160,11 +166,11 @@ int main(void)
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* definition and creation of LEDTask */
-  osThreadDef(LEDTask, StartLEDTask, osPriorityLow, 0, 128);
+  osThreadDef(LEDTask, StartLEDTask, osPriorityLow, 0, 512);
   LEDTaskHandle = osThreadCreate(osThread(LEDTask), NULL);
 
   /* definition and creation of GUITask */
-  osThreadDef(GUITask, StartTGUITask, osPriorityAboveNormal, 0, 128);
+  osThreadDef(GUITask, StartTGUITask, osPriorityAboveNormal, 0, 1024);
   GUITaskHandle = osThreadCreate(osThread(GUITask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
@@ -236,8 +242,8 @@ void SystemClock_Config(void)
   }
   PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_LTDC;
   PeriphClkInitStruct.PLLSAI.PLLSAIN = 420;
-  PeriphClkInitStruct.PLLSAI.PLLSAIR = 7;
-  PeriphClkInitStruct.PLLSAIDivR = RCC_PLLSAIDIVR_4;
+  PeriphClkInitStruct.PLLSAI.PLLSAIR = 5;
+  PeriphClkInitStruct.PLLSAIDivR = RCC_PLLSAIDIVR_8;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -374,6 +380,7 @@ static void MX_USART1_UART_Init(void)
   */
 static void MX_DMA_Init(void) 
 {
+
   /* DMA controller clock enable */
   __HAL_RCC_DMA2_CLK_ENABLE();
 
@@ -500,6 +507,11 @@ static void MX_GPIO_Init(void)
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void const * argument)
 {
+    
+    
+           
+          
+                 
   /* init code for FATFS */
   MX_FATFS_Init();
 
@@ -510,7 +522,7 @@ void StartDefaultTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+    osDelay(100);
   }
   /* USER CODE END 5 */ 
 }
@@ -525,9 +537,21 @@ void StartDefaultTask(void const * argument)
 void StartLEDTask(void const * argument)
 {
   /* USER CODE BEGIN StartLEDTask */
+	uint8_t CPU_RunInfo[400];		//保存任务运行时间信息
+	uint16_t CPU_Usage=0;
   /* Infinite loop */
   for(;;)
   {
+	memset(CPU_RunInfo,0,400);				//信息缓冲区清零
+ 
+    osThreadList(CPU_RunInfo);  //获取任务运行时间信息
+    
+    printf("---------------------------------------------\r\n");
+    printf("任务名      任务状态 优先级   剩余栈 任务序号\r\n");
+    printf("%s", CPU_RunInfo);
+    printf("---------------------------------------------\r\n");
+
+	printf("CPU使用率为：%d%%\r\n",CPU_Usage);  
     HAL_GPIO_TogglePin(GPIOH, LED_R_Pin);
     osDelay(500);
   }
@@ -545,21 +569,56 @@ void StartTGUITask(void const * argument)
 {
   /* USER CODE BEGIN StartTGUITask */
 	osEvent retkey;
+	uint32_t wbytes,rbytes; 
+	uint8_t wtext[] = "text to write logical disk ok!\n"; 
+	uint8_t rtext[40];
   /* Infinite loop */
   for(;;)
   {
-
-		retkey.value.v = 0;
-		retkey = osMessageGet(gui_msg_qHandle,10);
-		if(retkey.value.v == UBP_LIGHT_ON 
-			||retkey.value.v == UBP_LIGHT_OFF )
+	retkey.value.v = 0;
+	retkey = osMessageGet(gui_msg_qHandle,10);
+	if(retkey.value.v == UBP_LIGHT_ON 
+		||retkey.value.v == UBP_LIGHT_OFF )
+	{
+		HAL_GPIO_TogglePin(GPIOH, LED_G_Pin);
+	}
+	if(retkey.value.v == UBP_START)
+	{
+		
+	}
+	if(retkey.value.v == UBP_REFRESH)
+	{
+		if(retSD == FR_OK)
 		{
-			HAL_GPIO_TogglePin(GPIOH, LED_G_Pin);
+			if(f_mount(&SDFatFS, (TCHAR const*)SDPath, 1) == FR_OK)
+			{
+				f_mkdir("0:/LOG");
+				{
+					if(f_open(&SDFile, "0:/LOG/text.txt", FA_CREATE_ALWAYS | FA_WRITE) == FR_OK)
+					{
+						if(f_write(&SDFile, wtext, sizeof(wtext), &wbytes) == FR_OK)
+						{
+							f_close(&SDFile);
+						}
+						if(f_open(&SDFile, "0:/LOG/text.txt", FA_READ) == FR_OK)
+						{
+							if(f_read(&SDFile, rtext, sizeof(rtext), &rbytes) == FR_OK)
+							{
+								printf ("%s",rtext);
+								memcpy(rtextSDCardViewBuffer, rtext, 40*sizeof(uint8_t));
+								f_close(&SDFile);
+								osMessagePut(hal_msg_qHandle,(uint32_t)rtextSDCardViewBuffer,200);
+							}
+						}
+					}
+				}
+			}
 		}
-		if(HAL_GPIO_ReadPin(GPIOA,KEY1_Pin) == GPIO_PIN_SET)
+	}
+	if(HAL_GPIO_ReadPin(GPIOA,KEY1_Pin) == GPIO_PIN_SET)
     {
-      osMessagePut(gui_msg_qHandle,UBP_KEY,200);
-      osDelay(200);
+		osMessagePut(hal_msg_qHandle,UBP_KEY,200);
+		osDelay(200);
     }
     osDelay(1);
   }
@@ -584,6 +643,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   }
   /* USER CODE BEGIN Callback 1 */
 
+  
   /* USER CODE END Callback 1 */
 }
 

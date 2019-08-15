@@ -65,6 +65,11 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  gui/include/gui/updata_screen/UPDATAView.hpp \
  generated/gui_generated/include/gui_generated/updata_screen/UPDATAViewBase.hpp \
  gui/include/gui/updata_screen/UPDATAPresenter.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/progress_indicators/BoxProgress.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/ScrollableContainer.hpp \
  gui/include/gui/key_screen/KEYView.hpp \
  generated/gui_generated/include/gui_generated/key_screen/KEYViewBase.hpp \
  gui/include/gui/key_screen/KEYPresenter.hpp \
@@ -201,6 +206,16 @@ gui/include/gui/updata_screen/UPDATAView.hpp:
 generated/gui_generated/include/gui_generated/updata_screen/UPDATAViewBase.hpp:
 
 gui/include/gui/updata_screen/UPDATAPresenter.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/progress_indicators/BoxProgress.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/ScrollableContainer.hpp:
 
 gui/include/gui/key_screen/KEYView.hpp:
 

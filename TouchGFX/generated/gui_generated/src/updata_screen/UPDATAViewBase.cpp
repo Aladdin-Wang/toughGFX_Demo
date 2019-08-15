@@ -12,15 +12,64 @@ UPDATAViewBase::UPDATAViewBase() :
     box1.setPosition(0, 0, 800, 480);
     box1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
 
-    buttonWithLabel1.setXY(30, 348);
-    buttonWithLabel1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_SMALL_PRESSED_ID));
-    buttonWithLabel1.setLabelText(TypedText(T_SINGLEUSEID12));
-    buttonWithLabel1.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    buttonWithLabel1.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    buttonWithLabel1.setAction(buttonCallback);
+    buttonWithReturn.setXY(30, 341);
+    buttonWithReturn.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_SMALL_PRESSED_ID));
+    buttonWithReturn.setLabelText(TypedText(T_SINGLEUSEID12));
+    buttonWithReturn.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonWithReturn.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonWithReturn.setAction(buttonCallback);
+
+    buttonWithRefresh.setXY(30, 85);
+    buttonWithRefresh.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    buttonWithRefresh.setLabelText(TypedText(T_SINGLEUSEID17));
+    buttonWithRefresh.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonWithRefresh.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonWithRefresh.setAction(buttonCallback);
+
+    buttonWithStart.setXY(30, 210);
+    buttonWithStart.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
+    buttonWithStart.setLabelText(TypedText(T_SINGLEUSEID18));
+    buttonWithStart.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonWithStart.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonWithStart.setAction(buttonCallback);
+
+    box2.setPosition(256, 75, 482, 258);
+    box2.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 5));
+
+    boxProgress1.setXY(452, 394);
+    boxProgress1.setProgressIndicatorPosition(2, 2, 100, 10);
+    boxProgress1.setRange(0, 100);
+    boxProgress1.setDirection(AbstractDirectionProgress::RIGHT);
+    boxProgress1.setBackground(Bitmap(BITMAP_BLUE_PROGRESSINDICATORS_BG_SMALL_PROGRESS_INDICATOR_BG_SQUARE_0_DEGREES_ID));
+    boxProgress1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 151, 255));
+    boxProgress1.setValue(50);
+
+    textArea1.setXY(359, 395);
+    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea1.setLinespacing(0);
+    textArea1.setTypedText(TypedText(T_SINGLEUSEID19));
+
+    scrollableContainer1.setPosition(256, 75, 484, 258);
+    scrollableContainer1.setScrollbarsColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+
+    longText.setPosition(0, 0, 482, 308);
+    longText.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    longText.setLinespacing(0);
+    longTextBuffer[0] = 0;
+    longText.setWildcard(longTextBuffer);
+    longText.setTypedText(TypedText(T_SINGLEUSEID20));
+    scrollableContainer1.add(longText);
+    scrollableContainer1.setScrollbarsPermanentlyVisible();
+    scrollableContainer1.setScrollbarsVisible(false);
 
     add(box1);
-    add(buttonWithLabel1);
+    add(buttonWithReturn);
+    add(buttonWithRefresh);
+    add(buttonWithStart);
+    add(box2);
+    add(boxProgress1);
+    add(textArea1);
+    add(scrollableContainer1);
 }
 
 void UPDATAViewBase::setupScreen()
@@ -30,11 +79,25 @@ void UPDATAViewBase::setupScreen()
 
 void UPDATAViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &buttonWithLabel1)
+    if (&src == &buttonWithReturn)
     {
-        //Interaction1
-        //When buttonWithLabel1 clicked change screen to HOME
+        //ButtonToReturn
+        //When buttonWithReturn clicked change screen to HOME
         //Go to HOME with no screen transition
         application().gotoHOMEScreenNoTransition();
+    }
+    else if (&src == &buttonWithRefresh)
+    {
+        //ButtonToRefresh
+        //When buttonWithRefresh clicked call virtual function
+        //Call RefreshDataClicked
+        RefreshDataClicked();
+    }
+    else if (&src == &buttonWithStart)
+    {
+        //ButtonToStart
+        //When buttonWithStart clicked call virtual function
+        //Call StartUpClicked
+        StartUpClicked();
     }
 }

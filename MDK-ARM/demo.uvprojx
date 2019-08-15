@@ -324,7 +324,7 @@
             <wLevel>2</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>1</uC99>
+            <uC99>0</uC99>
             <uGnu>0</uGnu>
             <useXO>0</useXO>
             <v6Lang>1</v6Lang>
@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F429xx,USE_HAL_DRIVER,STM32F429xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FatFs/src;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;..\BSP;../Src;../TouchGFX/generated/fonts/include;../TouchGFX/generated/texts/include;../TouchGFX/generated/images/include;../TouchGFX/generated/gui_generated/include;../TouchGFX/gui/include;../middlewares/st/touchgfx/touchgfx/framework/include;../Drivers/BSP/Components/exc7200;../Drivers/BSP/Components/stmpe811;../Drivers/BSP/Components/ts3510;../Drivers/BSP/Components/ampire480272;../Drivers/BSP/Components/Common;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;..\Diag</IncludePath>
+              <IncludePath>../Inc;                ../Drivers/STM32F4xx_HAL_Driver/Inc;                ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;                ../Middlewares/Third_Party/FatFs/src;                ../Middlewares/Third_Party/FreeRTOS/Source/include;                ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;                ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;                ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;                ../Drivers/CMSIS/Include;                ..\BSP;                ../Src;                ../TouchGFX/generated/fonts/include;                ../TouchGFX/generated/texts/include;                ../TouchGFX/generated/images/include;                ../TouchGFX/generated/gui_generated/include;                ../TouchGFX/gui/include;../middlewares/st/touchgfx/touchgfx/framework/include;                ../Drivers/BSP/Components/exc7200;                ../Drivers/BSP/Components/stmpe811;                ../Drivers/BSP/Components/ts3510;                ../Drivers/BSP/Components/ampire480272;                ../Drivers/BSP/Components/Common;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;                ..\Diag;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -722,25 +722,20 @@
               <FileType>1</FileType>
               <FilePath>..\BSP\uart.c</FilePath>
             </File>
-            <File>
-              <FileName>w25q128.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BSP\w25q128.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Middlewares/TouchGFX</GroupName>
           <Files>
             <File>
-              <FileName>OSWrappers.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../Middlewares/ST/TouchGFX/touchgfx/os/OSWrappers.cpp</FilePath>
-            </File>
-            <File>
               <FileName>touchgfx_core.lib</FileName>
               <FileType>4</FileType>
               <FilePath>../middlewares/st/touchgfx/touchgfx/lib\core\cortex_m4f\Keil\touchgfx_core.lib</FilePath>
+            </File>
+            <File>
+              <FileName>OSWrappers.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../Middlewares/ST/TouchGFX/touchgfx/os/OSWrappers.cpp</FilePath>
             </File>
           </Files>
         </Group>
@@ -861,6 +856,11 @@
               <FileName>blue_buttons_round_small_pressed.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/images/src/__designer/blue_buttons_round_small_pressed.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>blue_progressindicators_bg_small_progress_indicator_bg_square_0_degrees.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/__designer/blue_progressindicators_bg_small_progress_indicator_bg_square_0_degrees.cpp</FilePath>
             </File>
             <File>
               <FileName>blue_togglebars_toggle_round_large_button_off.cpp</FileName>

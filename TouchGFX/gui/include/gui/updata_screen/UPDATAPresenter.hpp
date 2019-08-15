@@ -26,7 +26,15 @@ public:
     virtual void deactivate();
 
     virtual ~UPDATAPresenter() {};
-
+    void StartUp()  
+    {
+        model->StartUp();
+    }
+    void RefreshData()
+    {
+        model->RefreshData();
+    }
+    virtual void RtextSDCardView(uint8_t * data);
 private:
     UPDATAPresenter();
 
