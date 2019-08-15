@@ -65,3 +65,5 @@ demo\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 demo\main.o: ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h
 demo\main.o: ../Middlewares/Third_Party/FatFs/src/diskio.h
 demo\main.o: ../Inc/sd_diskio.h
+demo\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+demo\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

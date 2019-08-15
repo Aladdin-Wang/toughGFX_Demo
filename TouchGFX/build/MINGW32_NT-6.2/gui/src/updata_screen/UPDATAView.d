@@ -49,7 +49,15 @@ build/MINGW32_NT-6.2/gui/src/updata_screen/UPDATAView.o: \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/progress_indicators/BoxProgress.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/FontManager.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/ScrollableContainer.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp
 
 gui/include/gui/updata_screen/UPDATAView.hpp:
 
@@ -150,3 +158,19 @@ gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/progress_indicators/BoxProgress.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/FontManager.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/ScrollableContainer.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:

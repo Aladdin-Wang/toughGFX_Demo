@@ -61,3 +61,11 @@ demo\updatapresenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/to
 demo\updatapresenter.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\cassert
 demo\updatapresenter.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 demo\updatapresenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/Texts.hpp
+demo\updatapresenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/progress_indicators/BoxProgress.hpp
+demo\updatapresenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp
+demo\updatapresenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp
+demo\updatapresenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Image.hpp
+demo\updatapresenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp
+demo\updatapresenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/FontManager.hpp
+demo\updatapresenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp
+demo\updatapresenter.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp

@@ -147,6 +147,7 @@ void MX_LCD_Init(void)
   */ 
 void MX_FMC_Init(void) 
 {  
+
 /* FMC initialization function */
 
   /* USER CODE BEGIN FMC_Init 0 */
@@ -168,11 +169,11 @@ void MX_FMC_Init(void)
   hsdram1.Init.RowBitsNumber = FMC_SDRAM_ROW_BITS_NUM_12;
   hsdram1.Init.MemoryDataWidth = FMC_SDRAM_MEM_BUS_WIDTH_16;
   hsdram1.Init.InternalBankNumber = FMC_SDRAM_INTERN_BANKS_NUM_4;
-  hsdram1.Init.CASLatency = FMC_SDRAM_CAS_LATENCY_2;
+  hsdram1.Init.CASLatency = FMC_SDRAM_CAS_LATENCY_3;
   hsdram1.Init.WriteProtection = FMC_SDRAM_WRITE_PROTECTION_DISABLE;
   hsdram1.Init.SDClockPeriod = FMC_SDRAM_CLOCK_PERIOD_2;
-  hsdram1.Init.ReadBurst = FMC_SDRAM_RBURST_DISABLE;
-  hsdram1.Init.ReadPipeDelay = FMC_SDRAM_RPIPE_DELAY_0;
+  hsdram1.Init.ReadBurst = FMC_SDRAM_RBURST_ENABLE;
+  hsdram1.Init.ReadPipeDelay = FMC_SDRAM_RPIPE_DELAY_1;
   /* SdramTiming */
   SdramTiming.LoadToActiveDelay = 2;
   SdramTiming.ExitSelfRefreshDelay = 7;
@@ -234,7 +235,7 @@ void MX_SDRAM_InitEx(void)
   /* Step 5: Program the external memory mode register */
   tmpmrd = (uint32_t)SDRAM_MODEREG_BURST_LENGTH_1          |\
                      SDRAM_MODEREG_BURST_TYPE_SEQUENTIAL   |\
-                     SDRAM_MODEREG_CAS_LATENCY_2           |\
+                     SDRAM_MODEREG_CAS_LATENCY_3           |\
                      SDRAM_MODEREG_OPERATING_MODE_STANDARD |\
                      SDRAM_MODEREG_WRITEBURST_MODE_SINGLE;
 

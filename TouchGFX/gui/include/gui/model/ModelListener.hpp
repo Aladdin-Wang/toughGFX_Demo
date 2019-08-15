@@ -29,7 +29,11 @@ public:
     }
 	virtual void key_event()
     {
-        // Override and implement this function in Screen1Presenter
+        // Override and implement this function in Presenter
+    }
+    virtual void RtextSDCardView(uint8_t * data)
+    {
+        // Override and implement this function in Presenter
     }
 protected:
     Model* model;

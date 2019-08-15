@@ -68,7 +68,7 @@ void DIDViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
     if (&src == &buttonWithReturn)
     {
-        //Interaction1
+        //ButtonToReturn
         //When buttonWithReturn clicked change screen to HOME
         //Go to HOME with no screen transition
         application().gotoHOMEScreenNoTransition();

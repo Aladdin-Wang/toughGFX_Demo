@@ -25,6 +25,8 @@ FIL SDFile;       /* File object for SD */
 
 /* USER CODE BEGIN Variables */
 
+
+
 /* USER CODE END Variables */    
 
 void MX_FATFS_Init(void) 
@@ -33,6 +35,8 @@ void MX_FATFS_Init(void)
   retSD = FATFS_LinkDriver(&SD_Driver, SDPath);
 
   /* USER CODE BEGIN Init */
+
+
   /* additional user code for init */     
   /* USER CODE END Init */
 }

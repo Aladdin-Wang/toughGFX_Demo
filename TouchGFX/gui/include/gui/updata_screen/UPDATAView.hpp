@@ -11,6 +11,9 @@ public:
     virtual ~UPDATAView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void RefreshDataClicked();
+    virtual void StartUpClicked();
+    virtual void RtextSDCardView(uint8_t * data);
 protected:
 };
 

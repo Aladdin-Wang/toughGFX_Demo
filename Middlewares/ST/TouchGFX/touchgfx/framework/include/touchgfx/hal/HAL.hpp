@@ -829,7 +829,8 @@ public:
      * @param active If true, MCU is registered as being active, inactive otherwise.
      */
     void setMCUActive(bool active);
-
+    uint32_t getCCConsumed();
+    void setCCConsumed(uint32_t val);
     /**
      * @fn uint32_t HAL::getCPUCycles();
      *
@@ -840,7 +841,7 @@ public:
      * @return the cycle counter.
      */
     uint32_t getCPUCycles();
-
+	
     /**
      * @fn void HAL::setMCUInstrumentation(MCUInstrumentation* mcuInstr)
      *

@@ -80,6 +80,11 @@ demo\boardconfiguration.o: ../TouchGFX/gui/include/gui/dtc_screen/DTCPresenter.h
 demo\boardconfiguration.o: ../TouchGFX/gui/include/gui/updata_screen/UPDATAView.hpp
 demo\boardconfiguration.o: ../TouchGFX/generated/gui_generated/include/gui_generated/updata_screen/UPDATAViewBase.hpp
 demo\boardconfiguration.o: ../TouchGFX/gui/include/gui/updata_screen/UPDATAPresenter.hpp
+demo\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/progress_indicators/BoxProgress.hpp
+demo\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp
+demo\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp
+demo\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Image.hpp
+demo\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp
 demo\boardconfiguration.o: ../TouchGFX/gui/include/gui/key_screen/KEYView.hpp
 demo\boardconfiguration.o: ../TouchGFX/generated/gui_generated/include/gui_generated/key_screen/KEYViewBase.hpp
 demo\boardconfiguration.o: ../TouchGFX/gui/include/gui/key_screen/KEYPresenter.hpp

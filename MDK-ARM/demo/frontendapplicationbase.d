@@ -77,6 +77,11 @@ demo\frontendapplicationbase.o: ../TouchGFX/gui/include/gui/dtc_screen/DTCPresen
 demo\frontendapplicationbase.o: ../TouchGFX/gui/include/gui/updata_screen/UPDATAView.hpp
 demo\frontendapplicationbase.o: ../TouchGFX/generated/gui_generated/include/gui_generated/updata_screen/UPDATAViewBase.hpp
 demo\frontendapplicationbase.o: ../TouchGFX/gui/include/gui/updata_screen/UPDATAPresenter.hpp
+demo\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/progress_indicators/BoxProgress.hpp
+demo\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp
+demo\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp
+demo\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Image.hpp
+demo\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/ScrollableContainer.hpp
 demo\frontendapplicationbase.o: ../TouchGFX/gui/include/gui/key_screen/KEYView.hpp
 demo\frontendapplicationbase.o: ../TouchGFX/generated/gui_generated/include/gui_generated/key_screen/KEYViewBase.hpp
 demo\frontendapplicationbase.o: ../TouchGFX/gui/include/gui/key_screen/KEYPresenter.hpp
